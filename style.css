@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(82,17,176,1) 50%, rgba(0,0,0,1) 100%);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h1{
+  font-family: "Archivo Black", sans-serif;
+  font-weight: bolder;
+  font-size: 80px;
+  margin-top: 100px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 10px;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+  animation: reveal ease;
+  animation-timeline: view();
+  animation-range-start: cover 75% ;
+  animation-range-end: contain 250%;
+}
+
+h2{
+  font-size: 24px;
+  color: #7FCE90;
+  margin-bottom: 20px;
+}
+
+.btn-purple > a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+img{
+  width: 150px;
+  height: 150px;
+  margin: 0 200px;
+  border-radius: 50%;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+.card{
+  background: white;
+  width: 800px;
+  padding: 25px;
+  margin: 80px auto 50px auto;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 100px 100px rgba(0,0,0,.1);
+  animation: slide ease;
+  animation-timeline: view();
+  animation-range-start: cover 0% ;
+  animation-range-end: contain 33%;
+}
+
+.end-message{
+  font-size: 30px;
+  margin: 20px 0px 20px 0px;
+  color: white;
+  text-align: center;
+}
+
+.btn-purple{
+  background-color: #6B72E1;
+  color: white;
+  padding: 15px 0px;
+  margin: 5px 300px 5px 300px;
+  border-radius: 4px;
+  transition: scale 0.4s ease-out 30ms
+}
+
+.list-inline {
+  display: block;
+  align-items: center;
+  list-style: none;
+  padding-left: 0px;
+}
+
+li{
+  display: inline-block;
+  transition: scale 0.5s ease-out 30ms
+}
+
+li > a{
+  padding: 0 10px;
+  margin: 30px;
+  font-size: 50px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.101);
+}
+
+li:hover a{
+  color: rgb(0, 0, 0);
+}
+
+li:hover{
+  scale: 1.5;
+}
+
+.btn-purple:hover{
+  background-color: #4f5af3;
+  scale: 1.1;
+}
+
+@keyframes slide{
+  from{
+      transform: translateY(100%);
+      opacity: 0;
+      filter: blur(2px);
+  }
+  to{
+      transform: translateY(0%);
+      opacity: 1;
+      filter: blur(0px);
+  }
+}
+
+@keyframes reveal{
+  from{
+      opacity: 1;
+      filter: blur(0);
+      letter-spacing: 10px;
+  }
+  to{
+    opacity: 0;
+    filter: blur(3);
+    letter-spacing: 50px;
+  }
+}
+
+@media (max-width: 915px) {
+  /* Pour un écran < 720px, cette classe CSS s'applique */
+
+  img{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+  }
+
+  .card{
+    width: 80%;
+  }
+
+  .btn-purple{
+    background-color: #6B72E1;
+    color: white;
+    padding: auto;
+    margin: auto;
+  }
+  li > a{
+    color: white;
+    font-size: 80px;
+  }
+
+  #icon-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #transparent-card{
+    background-color: transparent;
+  }
+
+  #follow{
+    color: white;
+    font-size: 80px;
+  }
+}
